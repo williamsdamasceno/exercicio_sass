@@ -1,0 +1,112 @@
+$primary-color: #182C61;
+$secondary-color: #44bd32;
+$font-family: 'Roboto', sans-serif;
+$max-width: 1024px;
+$container-padding: 16px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  background-color: #f5f6fa;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: $container-padding 0;
+}
+
+header {
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.branding img {
+  width: 120px;
+  height: 70px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: $secondary-color;
+}
+
+section {
+  padding: 56px 0;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+
+.product-item {
+  width: 100%;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product-button {
+  display: block;
+  background-color: $secondary-color;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.product-button:hover {
+  background-color: lighten($secondary-color, 10%);
+}
+
+@media screen and (max-width: $max-width) {
+  .container {
+    max-width: 80%;
+  }
+}
