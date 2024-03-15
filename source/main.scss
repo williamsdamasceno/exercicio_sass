@@ -4,6 +4,9 @@ $font-family: 'Roboto', sans-serif;
 $max-width: 1024px;
 $container-padding: 16px;
 
+@import 'header';
+@import 'products';
+
 * {
   margin: 0;
   padding: 0;
@@ -27,47 +30,46 @@ ul {
 }
 
 header {
-  background-color: $primary-color;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
+    background-color: $primary-color;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .branding {
+        display: flex;
+        align-items: center;
+    
+        img {
+          width: 120px;
+          height: 70px;
+        }
+      }
 
-.branding {
-  display: flex;
-  align-items: center;
-}
-
-.branding img {
-  width: 120px;
-  height: 70px;
-}
-
-.menu {
-  display: flex;
-}
-
-.menu li {
-  font-weight: bold;
-  margin-left: 24px;
-}
-
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu li a:hover {
-  color: $secondary-color;
-}
-
+      .menu {
+        display: flex;
+    
+        li {
+          font-weight: bold;
+          margin-left: 24px;
+    
+          a {
+            color: #fff;
+            text-decoration: none;
+    
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
 section {
   padding: 56px 0;
 }
@@ -79,18 +81,20 @@ section {
   column-gap: 1%;
   row-gap: 4%;
   width: 100%;
+
+
+  item {
+    width: 100%;
+  }
 }
 
-.product-item {
-  width: 100%;
-}
-
-.product-item img {
+img {
   width: 100%;
   border-radius: 16px;
-}
+  }
 
-.product-button {
+
+button {
   display: block;
   background-color: $secondary-color;
   color: #fff;
@@ -99,11 +103,15 @@ section {
   border-radius: 8px;
   margin-top: 8px;
   text-decoration: none;
+
+  hover {
+    background-color: lighten($secondary-color, 10%);
+      }  
+  
+
 }
 
-.product-button:hover {
-  background-color: lighten($secondary-color, 10%);
-}
+
 
 @media screen and (max-width: $max-width) {
   .container {

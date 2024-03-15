@@ -1,0 +1,41 @@
+.header {
+    background-color: $primary-color;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .branding {
+      display: flex;
+      align-items: center;
+    }
+  
+    .branding img {
+      width: 120px;
+      height: 70px;
+    }
+  
+    .menu {
+      display: flex;
+    }
+  
+    .menu li {
+      font-weight: bold;
+      margin-left: 24px;
+    }
+  
+    .menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    .menu li a:hover {
+      color: $secondary-color;
+    }
+  }
